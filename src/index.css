@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+/* tailwindcss - 여기에 프로젝트의 테마를 설정
+url: https://tailwindcss.com/docs/theme
+사용되는 theme variables namespace
+--color-*	Color utilities like bg-red-500, text-sky-300, and many more
+--font-*	Font family utilities like font-sans
+--text-*	Font size utilities like text-xl
+--font-weight-*	Font weight utilities like font-bold
+--tracking-*	Letter spacing utilities like tracking-wide
+--leading-*	Line height utilities like leading-tight
+--breakpoint-*	Responsive breakpoint variants like sm:*
+--container-*	Container query variants like @sm:* and size utilities like max-w-md
+--spacing-*	Spacing and sizing utilities like px-4, max-h-16, and many more
+--radius-*	Border radius utilities like rounded-sm
+--shadow-*	Box shadow utilities like shadow-md
+--inset-shadow-*	Inset box shadow utilities like inset-shadow-xs
+--drop-shadow-*	Drop shadow filter utilities like drop-shadow-md
+--blur-*	Blur filter utilities like blur-md
+--perspective-*	Perspective utilities like perspective-near
+--aspect-*	Aspect ratio utilities like aspect-video
+--ease-*	Transition timing function utilities like ease-out
+--animate-*	Animation utilities like animate-spin
+*/
+@theme {
+}
+
+/* 
+주의사항
+1. 동적 클래스 구현방식
+- 클래스 이름을 동적으로 구성하지 않는다.
+- 완전한 클래스 이름을 동적으로 구성한다.
+bad: <div class="text-{{ error ? 'red' : 'green' }}-600"></div>
+good: <div class="{{ error ? 'text-red-600' : 'text-green-600' }}"></div>
+bad의 경우 tailwind는 해당 클래스를 생성하지 못한다.
+
+2. props를 사용하여 클래스 이름을 동적으로 작성하지 않는다.
+bad:
+function Button({ color, children }) {
+  return <button className={`bg-${color}-600 hover:bg-${color}-500 ...`}>{children}</button>;
+}
+
+good:
+function Button({ color, children }) {
+  const colorVariants = {
+    blue: "bg-blue-600 hover:bg-blue-500",
+    red: "bg-red-600 hover:bg-red-500",
+  };
+  return <button className={`${colorVariants[color]} ...`}>{children}</button>;
+}
+
+3. 스캔 제외되는 파일들
+- .gitignore 에 포함된 파일들
+- 바이너리 파일이나, 이미지, zip, 영상
+- .css
+- 잠긴 파일
+
+명시적으로 스캔하는 방법 (아래는 예시)
+@source "../node_modules/@acmecorp/ui-lib";
+Tailwind로 빌드된 외부 라이브러리를 스캔해야 할 때 유용
+
+4. 기본경로
+- 현재 작업 디렉토리를 시작점으로 사용함
+source()로 소스감지를 위한 기본 경로 명시적 설정 가능
+ex) @import 'tailwindcss' source("./src);
+또는  @soruce(none)으로 자동 소스 감지를 비활성확 ㅏ능
+*/

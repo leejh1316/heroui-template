@@ -1,0 +1,21 @@
+{
+  "editor.tabSize": 2,
+
+  // 폴더 단축 해제
+  "explorer.compactFolders": false,
+
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+
+  // prettier settings
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true, // prettier설정을 저장할 때마다 실행
+  "prettier.configPath": ".prettierrc.json",
+
+  // tailwindcss settings
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": "off"
+  }
+}

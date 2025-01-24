@@ -1,0 +1,72 @@
+{
+  // TypeScript 컴파일러 옵션
+  "compilerOptions": {
+    // TypeScript 빌드 정보 파일의 경로
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    // JavaScript의 대상 버전
+    "target": "ES2020",
+    // 클래스 필드에 대한 define 사용 여부
+    "useDefineForClassFields": true,
+    // 사용할 라이브러리
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    // 모듈 시스템
+    "module": "ESNext",
+    // 라이브러리 체크 건너뛰기
+    "skipLibCheck": true,
+    // TypeScript 확장자 임포트 허용 여부
+    "allowImportingTsExtensions": true,
+
+    /* 번들러 모드 */
+    // 모듈 해석 방법
+    "moduleResolution": "node",
+    // 기본 내보내기 임포트 허용 여부
+    "allowSyntheticDefaultImports": true,
+    // 모듈 격리 여부
+    "isolatedModules": true,
+    // 모듈 감지 방법
+    "moduleDetection": "force",
+    // 파일 출력 여부
+    "noEmit": true,
+    // JSX 변환 방식
+    "jsx": "react-jsx",
+
+    /* 린팅 옵션 */
+    // 엄격 모드
+    "strict": true,
+    // 사용되지 않는 지역 변수 체크
+    "noUnusedLocals": false,
+    // 사용되지 않는 매개변수 체크
+    "noUnusedParameters": false,
+    // switch 문에서의 fallthrough 방지
+    "noFallthroughCasesInSwitch": true,
+    // 확인되지 않은 부작용 임포트 방지
+    "noUncheckedSideEffectImports": false,
+
+    /* 경로 설정 */
+    // 기본 경로
+    "baseUrl": "./",
+    // 경로 별칭
+    "paths": {
+      "@src": ["./src"],
+      "@src/*": ["./src/*"],
+      "@assets": ["./src/assets"],
+      "@assets/*": ["./src/assets/*"],
+      "@components": ["./src/components"],
+      "@components/*": ["./src/components/*"],
+      "@domain": ["./src/domain"],
+      "@domain/*": ["./src/domain/*"],
+      "@router": ["./src/router"],
+      "@router/*": ["./src/router/*"],
+      "@types": ["./src/types"],
+      "@types/*": ["./src/types/*"],
+      "@global": ["./src/global"],
+      "@global/*": ["./src/global/*"],
+      "@utils": ["./src/utils"],
+      "@utils/*": ["./src/utils/*"],
+      "@hooks": ["./src/hooks"],
+      "@hooks/*": ["./src/hooks/*"]
+    }
+  },
+  // 포함할 파일 및 디렉토리
+  "include": ["src", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.jsx"]
+}
