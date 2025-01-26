@@ -1,5 +1,4 @@
 import { defineConfig, loadEnv } from "vite";
-import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { execSync } from "child_process";
@@ -19,7 +18,7 @@ export default defineConfig(({ mode }) => {
   const OUT_DIR = "./dist";
   const env = loadEnv(mode, process.cwd());
   return {
-    plugins: [react(), tailwindcss()],
+    plugins: [react()],
     resolve: {
       alias: {
         "@src": path.resolve(__dirname, "./src"),
