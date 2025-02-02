@@ -1,6 +1,5 @@
 import common from "./common";
-import buttons from "./buttons";
-const Components = { common, buttons };
+const Components = { common };
 
-export { common, buttons };
+export { common };
 export default Components;
