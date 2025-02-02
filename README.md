@@ -11,15 +11,6 @@ git checkout ts-heroui
 rm -rf .git
 ```
 
-### js-heroui
-
-```bash
-git clone https://github.com/leejh1316/my-tailwind-hero.git <프로젝트이름>
-cd <프로젝트이름>
-git checkout js-heroui
-rm -rf .git
-```
-
 ## 버전정보
 
 `heroui`: 2.6.14 (tailwind 4버전과 호환 안됨)  
