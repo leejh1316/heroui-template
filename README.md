@@ -4,17 +4,21 @@
 
 ### ts+heroui
 
-git clone https://github.com/leejh1316/my-tailwind-hero.git <프로젝트이름>  
-cd <프로젝트이름>  
-git checkout ts+heroui  
+```bash
+git clone https://github.com/leejh1316/my-tailwind-hero.git <프로젝트이름>
+cd <프로젝트이름>
+git checkout ts+heroui
 rm -rf .git
+```
 
 ### js+heroui
 
-git clone https://github.com/leejh1316/my-tailwind-hero.git <프로젝트이름>  
-cd <프로젝트이름>  
-git checkout js+heroui  
+```bash
+git clone https://github.com/leejh1316/my-tailwind-hero.git <프로젝트이름>
+cd <프로젝트이름>
+git checkout js+heroui
 rm -rf .git
+```
 
 ## 버전정보
 
