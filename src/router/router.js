@@ -1,7 +1,7 @@
 import React from "react";
-import { createBrowserRouter, RouteObject, MetaRouteObject } from "react-router";
+import { createBrowserRouter } from "react-router";
 
-export const routes: MetaRouteObject[] = [
+export const routes = [
   {
     name: "main",
     iconName: "home",
@@ -14,8 +14,7 @@ export const routes: MetaRouteObject[] = [
   },
 ];
 
-const toRouteObjects = (routes: MetaRouteObject[]): RouteObject[] =>
-  routes.map(({ name, iconName, ...rest }) => ({ ...rest }));
+const toRouteObjects = routes => routes.map(({ name, iconName, ...rest }) => ({ ...rest }));
 
 const router = createBrowserRouter(toRouteObjects(routes));
 

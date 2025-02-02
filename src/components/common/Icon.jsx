@@ -1,13 +1,4 @@
-import IconName from "./IconName";
-interface IconProps {
-  iconName: IconName;
-  fill?: number;
-  wght?: number;
-  grad?: number;
-  opsz?: number;
-}
-
-function Icon({ iconName, fill, grad, opsz, wght }: IconProps) {
+function Icon({ iconName, fill, grad, opsz, wght }) {
   const style = {
     fontVariationSettings: `
     'FILL' ${fill ?? 0}, 
