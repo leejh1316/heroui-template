@@ -5,7 +5,7 @@
 ### js-heroui
 
 ```bash
-git clone https://github.com/leejh1316/my-tailwind-hero.git <프로젝트이름>
+git clone https://github.com/leejh1316/heroui-template.git <프로젝트이름>
 cd <프로젝트이름>
 git checkout js+heroui
 rm -rf .git
