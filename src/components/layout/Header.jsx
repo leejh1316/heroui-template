@@ -1,4 +1,4 @@
-import Icon from "@components/common/Icon";
+import { Icon } from "@components/common/Icon";
 import {
   Button,
   Input,
@@ -11,7 +11,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@heroui/react";
-import { routes } from "@src/router/router";
+import { routes } from "@src/router";
 import { useMatches, useNavigate } from "react-router";
 
 export function Header() {
