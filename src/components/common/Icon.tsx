@@ -1,13 +1,14 @@
 import IconName from "./IconName";
 interface IconProps {
   iconName: IconName;
+  className?: string;
   fill?: number;
   wght?: number;
   grad?: number;
   opsz?: number;
 }
 
-function Icon({ iconName, fill, grad, opsz, wght }: IconProps) {
+function Icon({ iconName, fill, grad, opsz, wght, className }: IconProps) {
   const style = {
     fontVariationSettings: `
     'FILL' ${fill ?? 0}, 
@@ -16,7 +17,7 @@ function Icon({ iconName, fill, grad, opsz, wght }: IconProps) {
     'opsz' ${opsz ?? 24}`,
   };
   return (
-    <i className="material-symbols-rounded transition-all" style={style}>
+    <i className={`material-symbols-rounded select-none transition-all ${className}`} style={style}>
       {iconName}
     </i>
   );

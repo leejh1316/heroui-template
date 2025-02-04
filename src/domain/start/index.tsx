@@ -1,5 +1,5 @@
 function StartPage() {
-  return 1;
+  return <div className="h-screen">StartPage</div>;
 }
 
 export default StartPage;

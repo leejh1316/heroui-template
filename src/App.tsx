@@ -1,13 +1,13 @@
-import { RouterProvider } from "react-router";
+import { Outlet, RouterProvider } from "react-router";
 import router from "@router";
+import Header from "./components/layout/Header";
 
 function App() {
   return (
-    <>
-      <main>
-        <RouterProvider router={router} />
-      </main>
-    </>
+    <div className="font-gothic">
+      <Header />
+      <Outlet />
+    </div>
   );
 }
 
