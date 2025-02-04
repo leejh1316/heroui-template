@@ -11,24 +11,25 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@heroui/react";
-import { MetaRouteObject, useMatches, useNavigate } from "react-router";
 import { routes } from "@src/router/router";
-export default function Header() {
+import { useMatches, useNavigate } from "react-router";
+
+export function Header() {
   // store라 가정
   const user = { name: "lee", auth: true };
-
   const navigate = useNavigate();
-  const isHideHeader = useMatches<unknown, { hideHeader?: boolean }>().some(match => match.handle?.hideHeader);
+  const isHideHeader = useMatches().some(match => match.handle?.hideHeader);
 
-  function getNavItems(routes: MetaRouteObject[]): MetaRouteObject[] {
+  function getNavItems(routes) {
     const navs = routes.filter(route => route.isNavItem && (route.isAuth ? user.auth : true));
     return navs.map(({ children, ...route }) => {
       return {
         ...route,
         children: children ? getNavItems(children) : undefined,
       };
-    }) as MetaRouteObject[];
+    });
   }
+
   const navItems = getNavItems(routes);
 
   console.log(navItems);

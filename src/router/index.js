@@ -1,7 +1,7 @@
 import React from "react";
-import { createBrowserRouter, RouteObject, MetaRouteObject } from "react-router";
+import { createBrowserRouter } from "react-router";
 
-const metaRoutes: MetaRouteObject[] = [
+const metaRoutes = [
   {
     path: "/",
     Component: React.lazy(() => import("@src/App")),
@@ -120,7 +120,7 @@ const metaRoutes: MetaRouteObject[] = [
 
 const router = createBrowserRouter(metaRoutes);
 
-const routes = [...metaRoutes[0].children!, ...metaRoutes.slice(1)];
+const routes = [...metaRoutes[0].children, ...metaRoutes.slice(1)];
 
 export { routes };
 export default router;

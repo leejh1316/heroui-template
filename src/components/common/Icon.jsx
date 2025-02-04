@@ -1,14 +1,4 @@
-import IconName from "./IconName";
-interface IconProps {
-  iconName: IconName;
-  className?: string;
-  fill?: number;
-  wght?: number;
-  grad?: number;
-  opsz?: number;
-}
-
-function Icon({ iconName, fill, grad, opsz, wght, className }: IconProps) {
+export function Icon({ iconName, fill, grad, opsz, wght, className }) {
   const style = {
     fontVariationSettings: `
     'FILL' ${fill ?? 0}, 
@@ -22,5 +12,3 @@ function Icon({ iconName, fill, grad, opsz, wght, className }: IconProps) {
     </i>
   );
 }
-
-export default Icon;

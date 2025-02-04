@@ -1,6 +1,5 @@
-import { Outlet, RouterProvider } from "react-router";
-import router from "@router";
-import Header from "./components/layout/Header";
+import { Outlet } from "react-router";
+import { Header } from "./components/layout";
 
 function App() {
   return (

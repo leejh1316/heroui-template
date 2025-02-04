@@ -5,7 +5,7 @@ import { HeroUIProvider } from "@heroui/react";
 import { RouterProvider } from "react-router";
 import router from "./router";
 
-createRoot(document.getElementById("root")!).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
     <HeroUIProvider>
       <RouterProvider router={router} />
