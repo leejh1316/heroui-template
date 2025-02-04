@@ -27,3 +27,13 @@ rm -rf .git
 `react`: ^18.3.1  
 `vite`: 6.0.11  
 `typescript`: ~5.6.2
+
+## 추가정보
+
+`.vscode` 에 editor 설정을 구성함.
+
+`vscode 확장`
+
+- `Tailwind CSS IntelliSense`
+- `Prettier - Code formatter`
+- `Path Intellisense`
